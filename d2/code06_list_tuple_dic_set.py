@@ -30,7 +30,7 @@ arr7 = [[1,2,3,4],[5, 6,7,8,9,10]]      #2차원 배열
 print(arr7, end='\n\n')
 
 
-# 튜플
+# 튜플------------------------------
 
 tuple1 = (1,2,3,4)
 print(tuple1)
@@ -41,3 +41,28 @@ print(arr5)             #['4']
 #tuple1.append(4)       #error  # 한 번 생성된 튜플은 불변
 #print(tuple1)
 #print(type(tuple1))    #빨간 밑줄이 없다면 터미널에 오류메시지
+
+
+
+# 딕셔너리----------------------------
+
+spiderman = {   'name' : 'Peter Parker',
+                 'age' : 18,
+              'weapon' : 'web shooter',
+            'deserter' : '탈영병' }
+
+print(spiderman)
+print(spiderman['weapon'])
+print(spiderman['deserter'])
+print(type(spiderman))      # class == 'dict'
+
+
+# 집합
+
+set1 = set([1,2,3,4])       
+print(set1)
+
+
+set1 = set("Hello World")   # 겹치지 않는 알파벳; 중복 없음
+print(set1)
+
