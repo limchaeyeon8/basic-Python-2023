@@ -1,0 +1,46 @@
+[연산자]
++
+-
+* : 아스트릭
+%
+sqrt() : 루트 함수화
+
+
+1. 할당 연산; assignment
+2. equal 연산자(<비교 연산)
+3. 사칙연산
+    ### zero devision ###
+    print(6 // 0)     #error
+    print(6 % 0)      #0
+4. 문자열 연산
+    - +, *만 존재
+    - 문자열 길이
+        print(len(first))       #5
+    - 슬라이싱
+5. 리스트 연산
+    que.append(10)      # ((뒤에서))배열이 늘어나며 삽입 가능
+    print(que)
+
+    que.insert(3, 99)   #((원하는 위치에서))배열이 늘어나며 삽입 가능
+    print(que)
+
+    que.remove(99)      #해당값 삭제
+    print(que)
+6. 문자열 리스트
+7. 문자열 포멧팅(구식vs최신식)
+    - 특정문자로 문자열 가르기
+    - .replace() : 지정 문자열 교체
+8. 문자열 공백 없애기
+    .lstrip()      #좌측 공백 제거
+    .rstrip()      #우측 공백 제거
+    .strip()       #양측 공백 제거
+9. 문자열에서 값 찾기
+    print(full_name.index('e'))    #인덱스 위치 //없는 문자면 value error
+10. 찾는 단어의 개수 알려줌
+    print(full_name.count('e')) 
+11. 모든 단어를 대문자/소문자로 변경
+    print(full_name.upper())
+    print(full_name.lower())
+
+
+[연산자 우선순위]
