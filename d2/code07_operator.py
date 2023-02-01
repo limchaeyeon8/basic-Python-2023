@@ -176,3 +176,9 @@ print(full_name.count('e'))
 # 모든 단어를 대문자/소문자로 변경
 print(full_name.upper())
 print(full_name.lower())
+
+
+# 연산자 우선순위
+print(3 + 4 * 2)
+print((3 + 4) * 2)
+
