@@ -1,0 +1,11 @@
+윈도우는 보안 때문에 가상환경 실행 안 되는 오류 발생할 수
+OS관리자 권한
+
+PS:파워쉘(*cmd는 윈도우용//파워쉘은 다른 운영체제들에도 사용가능)
+
+# PS C:\Source\studyPython2023\venv\Scripts> .\activate.ps1
+# (venv) PS C:\Source\studyPython2023\venv\Scripts> 
+
+*** 가상환경에 대해 말해보세요
+
+글로번 파이썬과 독립 사용 가능한 환경을 만드는 것을 말합니다
