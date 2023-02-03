@@ -1,0 +1,42 @@
+웹 크로울링, 업무 자동화할 때 활용↓
+
+urlib 보다 더 많은 기능을 가진 request 패키지
+
+from urllib.request import Request, urlopen
+
+ㄴRequest, urlopen 색이 다름    # urlopen은 함수
+ㄴRequest <-클래스
+ㄴRequest() <-객체생성
+
+http's' <-보안업그레이드
+
+page not found 404
+print(res.status)               # 200 => 호출 가능한 상태
+
+
+Request클릭 + F12 => 클래스 모듈파일로 이동   C:\DEV\langs\Python311\Lib\urlib\request.py\
+
+*****인터넷 : 네트워크를 통한 리퀘스트와 리스폰스
+
+pip install requests        # 외부 패키지 사용을 위한 모듈 다운
+
+
+# 자동완성이 잘 안 되는 것도 있음
+res.status_code     # 200
+res.content         # html 코드
+
+
+from code17_calculator import *     # * ; All
+
+
+print(f'code29_module_name : {__name__}') # 현 파이썬 실행명(*모듈명X)
+print(f'code30_module_main : {__name__}')
+ㄴ code29_module_name : __main__
+ㄴ code30_module_main : __main__
+* __main__ : 프로그램 시작점
+
+import code29_module_name
+ㄴ code29_module_name : code29_module_name  # 
+
+if __name__ == '__main__':          ######
+    print('main을 실행합니다')
