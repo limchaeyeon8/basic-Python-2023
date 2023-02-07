@@ -1,2 +1,40 @@
 주피터노트북에선 디버깅 제약사항이 있음
 
+다른 셀에 있는 함수에 F11로 찾아가지 못 할 떄,
+파이썬 파일로 '내보내기' 후에 일반적인 파이썬 디버깅으로 진행하면 됨
+
+껐다가 키면 사용하려는 내용이 있는 셀 다시 실행을 시켜야함
+- 모두 실행
+
+print(arr) 대신 arr 만 적어도 가능
+
+
+* 빅데이터에 사용될 수 있음
+
+
+주피터노트북은 현위치가 루트
+
+
+[[[folium]]]
+
+!pip install folium     # 가상환경에서 설치
+ㄴ leaflet.js 
+     Leaflet | Data by © OpenStreetMap, under ODbL.
+
+ㄴ 지도 표현 
+folium.Map(location [위도, 경도], zoom_start=1~18, titles='')
+
+ㄴ 지도상 마킹 + 마커 커스터마이즈
+iframe = folium.IFrame('')
+popup = folium.Popup(iframe, min_width=, max_width=)
+
+folium.Marker(location [위도, 경도]
+                popup=popup
+                icon=folium.icon(color='', icon='')
+                ).add_to(m)
+    # 아이콘    https://getbootstrap.com/docs/3.3/components/
+
+ㄴ 웹페이지로 저장
+m.save('./index.html')
+
+
