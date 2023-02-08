@@ -103,6 +103,7 @@ print(f'파이는 {pi:10.3f}입니다.', end = '\n\n')       #파이는      3.1
 ![실행화면](https://raw.githubusercontent.com/limchaeyeon8/studyPython2023/main/Images/jupyterFolium.png)
 
 Folium OpenAPI 연동화면
+    - 검색 단어 '운동장'
 
 ## 9일차
 1. 파이썬 응용
