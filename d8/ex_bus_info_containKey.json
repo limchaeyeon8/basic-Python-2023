@@ -1,0 +1,13 @@
+// https: //apis.data.go.kr/6260000/BusanTblBusinfoeqStusService/getTblBusinfoeqStusInfo
+// ?serviceKey=nCm3nRGTwdBdzLV9edtOZ7YExTaj%2FG8IDt2pCwiXRZG8DQP1DLaVHXOJglvIdqym11%2BOGO4lDr8VFI12IuJxRQ%3D%3D
+// &pageNo=1&numOfRows=10
+// &stationLoc=%EB%A1%AF%EB%8D%B0%EB%B0%B1%ED%99%94%EC%A0%90
+// &resultType=json
+
+// ? 뒤 == (겟)파라미터
+// 총 5개 파라미터
+// 구분은 '&''
+
+{"getTblBusinfoeqStusInfo":{"header":{"resultCode":"00","resultMsg":"NORMAL_CODE"},"body":{"items":{"item":[{"stationNum":"09283","stationLoc":"롯데백화점센텀시티점","lat":"35.16967324","lng":"129.1317843","addr":"해운대구 우동 1496","insYear":"","dataDay":"2023-02-03"},{"stationNum":"09336","stationLoc":"롯데백화점센텀시티점","lat":"35.16997953","lng":"129.1320357","addr":"해운대구 우동 1498","insYear":"","dataDay":"2023-02-03"},{"stationNum":"06030","stationLoc":"롯데백화점동래점.명륜역","lat":"35.21276314","lng":"129.0781263","addr":"동래구 온천1동 474-25","insYear":"","dataDay":"2023-02-03"},{"stationNum":"06046","stationLoc":"롯데백화점동래점","lat":"35.2101971","lng":"129.0778307","addr":"동래구 온천2동 503-46","insYear":"","dataDay":"2023-02-03"}]},"numOfRows":10,"pageNo":1,"totalCount":4}}}
+
+

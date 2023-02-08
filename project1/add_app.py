@@ -2,16 +2,16 @@
 # 2023-02-06
 # CYL
 # 15. 예외처리
-# 15-1
-# 15-2
-# 15-3
+# 15-1 파일 없을 때 나는 예외
+# 15-2 입력시 / 개수가 다를 때 예외
+# 15-3 메뉴번호 입력 숫자외 예외
 
 import os       # 운영체제용 모듈
 
 # 2. 클래스 생성
 class Contact:
 
-    # 2. 생성자 - 이름, 전번, 이메일, 주소
+    # 2. 생성자 선언 - 이름, 전번, 이메일, 주소
     def __init__(self, name, ph_num, email, addr) -> None:
         self.__name = name
         self.__ph_num = ph_num
@@ -91,6 +91,16 @@ def save_contacts(list):
 
 # 14. 주소록 읽어오기
 def load_contacts(list):
+
+    try:
+        file = open('C:/Source/studyPython2023/project1/contacts.txt', 'r', 
+                    encoding = 'utf-8')
+    except Exception as e:  #15-1. 예외처리
+        f = open('C:/Source/studyPython2023/project1/contacts.txt', 'w', 
+                    encoding = 'utf-8')
+        f.close()   # 파일이 없어서 생기는 예외는 파일생성하고 함수아웃
+        return
+
     file = open('C:/Source/studyPython2023/project1/contacts.txt', 'r', encoding='utf-8')
     while True:
         line = file.readline()
@@ -104,15 +114,22 @@ def load_contacts(list):
 
 # 추가>>> 화면 클리어
 def clear_console():
-    command = 'clear'   # 리눅스유닉스 화면 클리어명령어
-    if os.name in ('nt', 'dos') : # 윈도우 운영체제라면
-        command = 'cls'            # 윈도우 화면 클리어 명령어
+    command = 'clear'               # 리눅스유닉스 화면 클리어명령어
+    if os.name in ('nt', 'dos') :   # 윈도우 운영체제라면
+        command = 'cls'             # 윈도우 화면 클리어 명령어
 
     os.system(command)
 
 
 # 6. 메뉴 표시
 def get_menu():
+
+##     str_menu = '''주소록앱 v1.0            
+## 1. 연락처 추가
+## 2. 연락처 출력
+## 3. 연락처 삭제
+## 4. 앱종료'''    # ''' ''' : 여러줄 쓰기 편하지만 들여쓰기 보기 안좋다.
+
     str_menu = ('주소록 앱 v 0.5\n'
                 '1. 연락처 추가\n'
                 '2. 연락처 출력\n'
@@ -138,28 +155,27 @@ def run():       # 클래스 함수가 아님 // self 사용 x
     clear_console()      
     while True:
         sel_menu = get_menu()
-        if sel_menu == 1:   # 8 연락처 추가
+        if sel_menu == 1:                   # 8 연락처 추가
             #clear_console()
-            try:
+            try:                            # 15-2 연락처 입력잘못했을 때 예외처리
                 contact = set_contact()
                 contacts.append(contact)
-                input('주소록 입력 성공') # 아무것도 안 받는 입력
+                input('주소록 입력 성공')               # 아무것도 안 받는 입력
             except Exception as e:
                 print('이름/전번/이메일/주소 순으로 똑바로 입력하세요 !')
                 input()
             finally:
                 clear_console()
-        elif sel_menu == 2: # 9 연락처 출력
-            #clear_console()
+        elif sel_menu == 2:                 # 9 연락처 출력
             get_contacts(contacts)
             input('주소록 출력 완료')
             clear_console()
-        elif sel_menu == 3: # 10 연락처 삭제
+        elif sel_menu == 3:                 # 10 연락처 삭제
             name = input('삭제할 이름 입력 : ')
             del_contact(contacts, name)
-            input()
+            input()                                     # 아무것도 안 받는 입력
             clear_console()
-        elif sel_menu == 4:     # 13 종료시 주소록 파일 저장
+        elif sel_menu == 4:                 # 13 종료시 주소록 파일 저장
             save_contacts(contacts)
             break
         else:
