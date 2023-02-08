@@ -82,7 +82,7 @@ def clear_console():
 
 # 13. 주소록 파일 저장
 def save_contacts(list):
-    file = open('C:/Source/studyPython/Project/contacts.txt', 'w', 
+    file = open('C:/Source/studyPython2023/project1/contacts.txt', 'w', 
             encoding = 'utf-8')
     for item in list:
         text = f'{item.getName()}/{item.getPhoneNum()}/{item.getEmail()}/{item.getAddr()}'
@@ -93,10 +93,10 @@ def save_contacts(list):
 # 14. 주소록 읽어오기
 def load_contacts(list):
     try:
-        file = open('C:/Source/studyPython/Project/contacts.txt', 'r', 
+        file = open('C:/Source/studyPython2023/project1/contacts.txt', 'r', 
                     encoding = 'utf-8')
     except Exception as e:  #15-1. 예외처리
-        f = open('C:/Source/studyPython/Project/contacts.txt', 'w', 
+        f = open('C:/Source/studyPython2023/project1/contacts.txt', 'w', 
                     encoding = 'utf-8')
         f.close()   # 파일이 없어서 생기는 예외는 파일생성하고 함수아웃
         return

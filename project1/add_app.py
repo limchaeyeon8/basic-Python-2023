@@ -38,16 +38,16 @@ class Contact:
     
     # 12. 각 멤버변수 접근하는 함수
     # getName, getPhoneNum, getEmail, getAddr
-    def getName(self) -> str:
+    def getName(self):
         return self.__name
     
-    def getPhoneNum(self) -> str:
+    def getPhoneNum(self):
         return self.__ph_num
     
-    def getEmail(self) -> str:
+    def getEmail(self):
         return self.__email
     
-    def getAddr(self) -> str:
+    def getAddr(self):
         return self.__addr
         
 
@@ -74,7 +74,7 @@ def del_contact(list, name):
             count += 1
             del list[i]     #list 삭제
 
-    if count > 0:   # 11. 메시지 출력
+    if count > 0:   # 11. 삭제 메시지 출력
         print('삭제했습니다')
     else:
         print('삭제할 주소록이 없습니다')
@@ -101,7 +101,6 @@ def load_contacts(list):
         f.close()   # 파일이 없어서 생기는 예외는 파일생성하고 함수아웃
         return
 
-    file = open('C:/Source/studyPython2023/project1/contacts.txt', 'r', encoding='utf-8')
     while True:
         line = file.readline()
         if not line: break
@@ -112,7 +111,8 @@ def load_contacts(list):
 
     file.close()
 
-# 추가>>> 화면 클리어
+
+# 추가>>> 콘솔 화면 클리어
 def clear_console():
     command = 'clear'               # 리눅스유닉스 화면 클리어명령어
     if os.name in ('nt', 'dos') :   # 윈도우 운영체제라면
@@ -162,22 +162,25 @@ def run():       # 클래스 함수가 아님 // self 사용 x
                 contacts.append(contact)
                 input('주소록 입력 성공')               # 아무것도 안 받는 입력
             except Exception as e:
-                print('이름/전번/이메일/주소 순으로 똑바로 입력하세요 !')
-                input()
+                input('이름/전번/이메일/주소 순으로 똑바로 입력하세요 !')
             finally:
                 clear_console()
+
         elif sel_menu == 2:                 # 9 연락처 출력
             get_contacts(contacts)
             input('주소록 출력 완료')
             clear_console()
+
         elif sel_menu == 3:                 # 10 연락처 삭제
             name = input('삭제할 이름 입력 : ')
             del_contact(contacts, name)
             input()                                     # 아무것도 안 받는 입력
             clear_console()
+
         elif sel_menu == 4:                 # 13 종료시 주소록 파일 저장
             save_contacts(contacts)
             break
+        
         else:
             clear_console()
 
@@ -185,3 +188,5 @@ def run():       # 클래스 함수가 아님 // self 사용 x
 if __name__ == '__main__':
     #print('■주소록 앱 시작합니다■')
     run()
+
+    
