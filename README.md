@@ -110,4 +110,12 @@ Folium OpenAPI 연동화면
     - GUI 개발 
         - Tkinter(구식 방법) 소개
         - PyQt 소개 및 설치
-    - 자료구조 추가
+        - PuQt 기본 사용법
+        - 위젯
+
+
+## 10일차
+1. 파이썬 응용
+    - GUI 개발
+        - PuQt 위젯 계속
+        
